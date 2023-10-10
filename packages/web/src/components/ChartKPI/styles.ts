@@ -10,8 +10,9 @@ export const Container = styled.div<Props>`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  max-height: 120px;
-  padding: 16px;
+  max-height: 100px;
+  padding: 8px;
+  gap: 8px;
  
   background-color: #22971c;
 
@@ -23,16 +24,24 @@ export const Container = styled.div<Props>`
   border-radius: 8px;
 `;
 
-export const Title = styled.span`
+export const Title = styled.span<Props>`
   font-family: 'Titillium Web';
-  font-size: 1.0rem;
+  font-size: 1rem;
   text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  ${({ color }) => color && css`
+    color: ${color};
+  `}
 `
 
 export const Subtitle = styled.span<Props>`
   font-family: 'Titillium Web';
-  font-size: 3.25rem;
+  font-size: 2.5rem;
   text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  ${({ color }) => color && css`
+    color: ${color};
+  `}
 `
 
 export const HorizontalContainer = styled.div`

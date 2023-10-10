@@ -1,23 +1,27 @@
 import { ReactNode } from 'react'
-import dayjs from 'dayjs'
+import Link from 'next/link'
 
 import { OccurrenceDTO } from '@/dtos/OccurrenceDTO'
 
-import { Container, Title, ItemContainer, ItemTitle, ItemSubtitle, ItemContainerHorizontal, ItemContainerVertical, DataText } from './styles'
-import Link from 'next/link'
+import { 
+  Container, 
+  Title, 
+  ItemContainer, 
+  ItemTitle, 
+  ItemSubtitle, 
+  ItemContainerHorizontal, 
+  ItemContainerVertical, 
+  DataText 
+} from './styles'
+
+import { getDescribeDate } from '@/utils/get_describe_date'
+import { getDescribeTime } from '@/utils/get_describe_time'
 
 type Props = {
   lastOccurrences: OccurrenceDTO[]
   children?: ReactNode
 }
 
-function getDescribeDate(date: Date) {
-  return dayjs(date).format('DD/MM/YYYY')
-}
-
-function getDescribeTime(date: Date) {
-  return dayjs(date).format('HH:mm[h]')
-}
 
 export function Sidebar({ lastOccurrences, children }: Props) {
   return (

@@ -121,30 +121,56 @@ export default function Home() {
 
           <Wrapper>
             <SectionKPI>
-              <ChartKPI color={theme.COLORS.BLUE_DARK} title="Ocorrências"totals={totalOfOccurrences.total}>
+              <ChartKPI 
+                title="Ocorrências" 
+                color={theme.COLORS.DARK_LIGHT} 
+                totals={totalOfOccurrences.total}
+              >
                 <DynamicBarKPIChart dataChart={occurrencesLineChart} />
               </ChartKPI>
               
-              <ChartKPI color={theme.COLORS.INFO} title="Abertas"totals={totalOfOccurrences.open}>
+              <ChartKPI 
+                title="Abertas"
+                color={theme.COLORS.DARK_LIGHT} 
+                totals={totalOfOccurrences.open}
+              >
                 <DynamicBarKPIChart dataChart={occurrencesLineChart} /> 
               </ChartKPI>
 
-              <ChartKPI color={theme.COLORS.ATTENTION} title="Andamento"totals={totalOfOccurrences.current}>
+              <ChartKPI 
+                title="Andamento" 
+                color={theme.COLORS.DARK_LIGHT} 
+                totals={totalOfOccurrences.current}
+              >
                 <DynamicBarKPIChart dataChart={occurrencesLineChart} /> 
               </ChartKPI>
 
-              <ChartKPI color={theme.COLORS.DANGER} title="Canceladas"totals={totalOfOccurrences.canceled}>
+              <ChartKPI 
+                title="Canceladas" 
+                color={theme.COLORS.DARK_LIGHT} 
+                totals={totalOfOccurrences.canceled}
+              >
                 <DynamicBarKPIChart dataChart={occurrencesLineChart} /> 
               </ChartKPI>
 
-              <ChartKPI color={theme.COLORS.SUCCESS}  title="Concluídas"totals={totalOfOccurrences.closed}>
+              <ChartKPI 
+                title="Concluídas" 
+                color={theme.COLORS.DARK_LIGHT}  
+                totals={totalOfOccurrences.closed}
+              >
                 <DynamicBarKPIChart dataChart={occurrencesLineChart} /> 
               </ChartKPI>
             </SectionKPI> 
 
-            {occurrencesLineChart && <DynamicCombinedChart dataChart={occurrencesLineChart} />}
+            <SectionKPI>
+              <DynamicCombinedChart dataChart={occurrencesLineChart} />
+              <DynamicMap />
+            </SectionKPI>
+
+            <SectionKPI>
+              
+            </SectionKPI>
             
-            <DynamicMap />
           
           </Wrapper>
         </Content>

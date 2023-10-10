@@ -9,7 +9,7 @@ type Props = {
   color?: string
 }
 
-export function ChartKPI({ color = '#22971c',title, totals, children }: Props) {
+export function ChartKPI({ color = '#FFF',title, totals, children }: Props) {
   return (
     <Container color={color}>
       <HorizontalContainer>

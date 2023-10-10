@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 
 export function Header () {
   const route = useRouter()
-  
+ 
   return (
     <Container>
       <Link href="/" legacyBehavior>
@@ -20,12 +20,12 @@ export function Header () {
         <Link href="/" passHref legacyBehavior>
           <MenuItem isActive={route.pathname === '/'}>
             <FiHome />
-            Home
+            Ínicio
           </MenuItem>
         </Link>
 
         <Link href="/occurrences" passHref legacyBehavior>
-          <MenuItem isActive={route.pathname.includes('/occurrences') }>
+          <MenuItem isActive={route?.pathname?.includes('/occurrences') }>
             <FiTarget />
             Ocorrências
           </MenuItem>

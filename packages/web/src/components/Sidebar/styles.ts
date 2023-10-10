@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
+  background-color: #000;
 `;
 
 export const Title = styled.span`

@@ -18,7 +18,7 @@ export function CombinedChart({ dataChart }: Props) {
     <Container>
       <Title>Total de Ocorrências por Tipo e Data</Title>
       
-      <BarChart width={600} height={300} data={dataChart} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+      <BarChart width={500} height={200} data={dataChart} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
         <Bar dataKey="total" />
         <Legend />
         <XAxis dataKey="type" />
